@@ -57,7 +57,7 @@ the license with your private key write the signed license to a JSON file.
  
 
 ```
-  public static String PRIVATE_KEY="308201B83082012C06072A8648CE380401308201...."
+  public static String PRIVATE_KEY="308201B83082012C06072A8648CE380401308201....";
 
   // create the license object
   MyLicense lic = new MyLicense();
@@ -82,7 +82,7 @@ If the signature was successfully verified, you know the license
 has not tampered, and you can check the features in your software. 
 
 ```
-public static String PUBLIC_KEY = "33082014B0201003082012C06072A8648CE380401..."
+public static String PUBLIC_KEY = "33082014B0201003082012C06072A8648CE380401...";
 
 try {
    MyLicense lic = LicenseUtils.readLicense("license.json", MyLicense.class);
