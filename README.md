@@ -30,14 +30,14 @@ Define a new POJO type with licensed features as fields.
 ```
 public class MyLicense extends AbstractLicense {
 
-    @JSONField(name = "feature1")
+    @JSONField(name = "HostID")
     private String hostId;
 
-    @JSONField(name = "feature2")
-    private Boolean hostId;
+    @JSONField(name = "Option")
+    private Boolean option;
 
-    @JSONField(name = "feature3")
-    private Integer hostId;
+    @JSONField(name = "Capacity")
+    private Integer caapcity;
 
    /**
     * Create default constructor withou parameters
@@ -88,9 +88,9 @@ try {
    MyLicense lic = LicenseUtils.readLicense("license.json", MyLicense.class);
  
    if (lic.verify(PUBLIC_KEY)) {
-       if (  lic.getFeature1().equals("some text") 
-          && lic.getFeature2()
-          && lic.getFeature3() == 100) {
+       if (  lic.getHostId().equals("some text") 
+          && lic.getOption()
+          && lic.getCapacity() == 100) {
              System.out.println("License is valid");
        } else {
              // signature OK but features not
